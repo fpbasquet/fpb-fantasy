@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}Default Title{% endblock %}</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <link rel="stylesheet" href="{% static 'stylesv4.css' %}">
+        <link rel="stylesheet" href="{% static 'stylesv6.css' %}">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--Bootstrap CSS-->
@@ -15,18 +15,25 @@
     <body>	
         <nav class="custom-nav">
             <ul class="left-nav">
-                <li><a class="custom-a" href="#">Home</a></li>
+                <li><a class="custom-a" href="/">Home</a></li>
                 <li><a class="custom-a" href="#">Players</a></li>
                 <li><a class="custom-a" href="#">Teams</a></li>
                 <li><a class="custom-a" href="#">Standings</a></li>
                 <li><a class="custom-a" href="#">Rules</a></li>
                 <li><a class="custom-a" href="#">Contact Us</a></li>
             </ul>
-            <ul class="right-nav">
-                <li><a class="custom-a" href="/register">Sign up</a></li>
-                <li><a class="custom-a" href="#">Sign in</a></li>
+            {% if user.is_authenticated %}
+                <ul class="right-nav">
+                    <li><a class="custom-a" href="/logout">Log Out</a></li>
 
-            </ul>
+                </ul>
+            {% else %}
+                <ul class="right-nav">
+                    <li><a class="custom-a" href="/register">Sign up</a></li>
+                    <li><a class="custom-a" href="/login">Sign in</a></li>
+
+                </ul>
+            {% endif %}
         </nav>
         <header class="custom-header">
             <h1>SlamDreamer</h1>
