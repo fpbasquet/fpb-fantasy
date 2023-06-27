@@ -5,17 +5,25 @@
 __pycache__
 db.sqlite3
 media
+# Ignore pytest cache and test result files
+__pycache__/
+.pytest_cache/
+*.pyc
+*.pyo
+*.pyd
+*.pyi
+*.pyz
+.mypy_cache/
+
+
 
 # Backup files # 
 *.bak 
 
 # If you are using PyCharm # 
 # User-specific stuff
-.idea/**/workspace.xml
-.idea/**/tasks.xml
-.idea/**/usage.statistics.xml
-.idea/**/dictionaries
-.idea/**/shelf
+.idea/
+
 
 # AWS User-specific
 .idea/**/aws.xml

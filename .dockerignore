@@ -1,0 +1,26 @@
+# Ignore common development and system files
+**/__pycache__
+**/*.py[cod]
+**/*.sqlite3
+**/*.log
+*.pyc
+*.swp
+
+# Ignore Django specific files
+**/local_settings.py
+**/migrations/
+**/staticfiles/
+
+# Ignore PostgreSQL specific files
+**/pgdata/
+
+# Ignore Docker specific files
+.dockerignore
+.dockerenv
+.dockerignore
+.dockerignore
+.dockerignore
+.dockerignore
+.git
+.gitignore
+README.md
